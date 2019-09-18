@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: antiquewhite;
+}
+
+.topnavbar {
+    background-color: #333;
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.2);
+}
+
+.topnavbar ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.topnavbar a {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    padding: 19px 20px;
+}
+
+.nav-items {
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+    transition: 0.3s ease;
+}
+
+.nav-items a:hover {
+    background-color: #DDD;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+/*hide the checkbox*/
+input#menu-icon-input {
+    display: none;
+}
+
+/*hide the menu icon in large screen (Above 800px wide screen)*/
+.topnavbar label {
+    padding: 10px 20px;
+    float: right;
+    font-size: 2rem;
+    color: #F2F2F2;
+    display: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.topnavbar label:hover {
+    background-color: #DDD;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.active {
+    background-color: #61977E;
+    color: #FFF;
+}
+
+.head-note {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.head-note h1 {
+    font-size: 2rem;
+}
+
+.head-note .note {
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-container {
+    margin: 10px 20px;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+section {
+    margin: 0 70px;
+    padding: 30px;
+}
+
+section header h1 {
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+article p {
+    padding: 10px 40px;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+footer {
+    background-color: #61977E;
+    height: 50px;
+    padding: 15px;
+}
+
+footer p {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/*Media queries*/
+@media screen and (max-width: 800px) {
+    /*display one link in one row*/
+    .topnavbar ul {
+        display: block;
+    }
+
+    /*Display the menu icon*/
+    .topnavbar label {
+        display: inline-flex;
+        font-size: 1rem;
+    }
+
+    /* Hovering effect on link*/
+    .topnavbar a {
+        display: block;
+    }
+
+    /* Hide links until the menu icon is clicked*/
+    .nav-items {
+        max-height: 0;
+    }
+
+    /* Display the links on click on menu-icon*/
+    input:checked ~ .nav-items {
+        max-height: 100%;
+    }
+
+    .head-note {
+        margin: 7px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .head-note h1 {
+        font-size: 1.5rem;
+    }
+    
+    .head-note .note {
+        font-size: 1rem;
+    }
+    
+    .section-container {
+        margin: 5px 10px;
+        padding: 5px;
+        max-width: 800px;
+    }
+    
+    section {
+        margin: 0 30px;
+        padding: 15px;
+    }
+    
+    section header h1 {
+        font-size: 1.2rem;
+    }
+    
+    article p {
+        padding: 5px 20px;
+        font-size: 1rem;
+    }
+    
+    footer {
+        height: 30px;
+        padding: 7px;
+    }
+    
+    footer p {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
